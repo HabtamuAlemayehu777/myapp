@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: rgba(3, 45, 38, 0.6); /* semi-transparent for blur */
+    filter: drop-shadow(10px);
+    backdrop-filter: blur(10px); /* the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    /*background-image: linear-gradient(to bottom right, #032D26, #073830, #0A4239,#12574B,#208171);*/
+    align-items: center;
+    padding: 20px 40px;
+    color: white;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    float: left;
+    color: #33C3AC;
+}
+
+.right-menu {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    right: 120px;
+}
+
+.list-none{
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    border-bottom: 3px solid;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.list-none:hover{
+    font-weight: 500;
+    color: #00bcd4;
+    transition: width 0.9s ease-in-out;
+}
+
+.list-none::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  top: 20px;
+  background-color: #00bcd4;
+  transition: width 0.3s ease-in-out;
+}
+
+.list-none:hover::after {
+  width: 100%;
+}
